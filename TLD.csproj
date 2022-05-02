@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2DBDE29-F0EF-4DB6-A4A5-512615698846}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TDM</RootNamespace>
+    <AssemblyName>TLD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigWin.Designer.cs">
+      <DependentUpon>ConfigWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Console.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console.Designer.cs">
+      <DependentUpon>Console.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AuthDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AuthDialog.Designer.cs">
+      <DependentUpon>AuthDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DownloadControl.Designer.cs">
+      <DependentUpon>DownloadControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="ErrorLog.cs" />
+    <Compile Include="JsonConvert.cs" />
+    <Compile Include="JsonWriter.cs" />
+    <Compile Include="LibLoader.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Package.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Saved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saved.Designer.cs">
+      <DependentUpon>Saved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskManager.cs" />
+    <Compile Include="TodusGeter.cs" />
+    <Compile Include="TodusSigned.cs" />
+    <Compile Include="TodusUtil.cs" />
+    <Compile Include="TxtDownloader.cs" />
+    <Compile Include="UI\Document.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Document.designer.cs">
+      <DependentUpon>Document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebClientEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Codigos\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DarkUI">
+      <HintPath>..\..\..\..\Codigos\DarkUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigWin.resx">
+      <DependentUpon>ConfigWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Console.resx">
+      <DependentUpon>Console.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthDialog.resx">
+      <DependentUpon>AuthDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadControl.resx">
+      <DependentUpon>DownloadControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.ssy.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Saved.resx">
+      <DependentUpon>Saved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Document.resx">
+      <DependentUpon>Document.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adb.pik" />
+    <None Include="Resources\control_play.png" />
+    <None Include="Resources\control_stop.png" />
+    <None Include="Resources\document_sm.png" />
+    <None Include="Resources\exo_controls_repeat_all.png" />
+    <None Include="Resources\exo_edit_mode_logo.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\ic_action_send_now_light.png" />
+    <None Include="Resources\ic_close_btn.png" />
+    <None Include="Resources\ic_download_tv.png" />
+    <None Include="Resources\ic_drawer.png" />
+    <None Include="Resources\ic_menu_add.png" />
+    <None Include="Resources\ic_notification_history.png" />
+    <None Include="Resources\ic_notification_history_white.png" />
+    <None Include="Resources\ic_pause_action_light.png" />
+    <None Include="Resources\ic_play_arrow_action_light.png" />
+    <None Include="Resources\icon_add.png" />
+    <None Include="Resources\icon_add_activated.png" />
+    <None Include="Resources\icon_error_stop.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\link.png" />
+    <None Include="Resources\load_more_warning.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\NavOverFlow_Start.png" />
+    <None Include="Resources\new.png" />
+    <None Include="Resources\s_reload.png" />
+    <None Include="Resources\setting_med_active.png" />
+    <None Include="Resources\shortcut.png" />
+    <None Include="Resources\software-installer-uninstall.png" />
+    <None Include="Resources\state_clear.png" />
+    <None Include="Resources\TDL.png" />
+    <None Include="Resources\TDM.ico" />
+    <None Include="Resources\ti.wav" />
+    <None Include="Resources\type_video.png" />
+    <None Include="Resources\1_5145639539531841876.jpg" />
+    <None Include="Resources\6.ico" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\61.ico" />
+    <None Include="Resources\100057700900_72979.jpg" />
+    <None Include="Resources\AbsoluteLayout.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\android.png" />
+    <None Include="Resources\appbackground.png" />
+    <None Include="Resources\as-avd-start.png" />
+    <None Include="Resources\chess_error.wav" />
+    <None Include="Resources\chess_finish.wav" />
+    <None Include="Resources\com_facebook_close.png" />
+    <None Include="Resources\confirm.wav" />
+    <None Include="Resources\control_pause.png" />
+    <None Include="Resources\b_key.png" />
+    <None Include="Resources\ScrollBarArrowDown.png" />
+    <None Include="Resources\ScrollBarArrowUp.png" />
+    <None Include="Resources\100033500994_214776-Recuperado.png" />
+    <EmbeddedResource Include="Libs\Bunifu_UI_v1.5.3.dll" />
+    <EmbeddedResource Include="Libs\DarkUI.dll" />
+    <Content Include="logo.ico" />
+    <None Include="Resources\logoTxt on.png" />
+    <None Include="Resources\logoTxt.png" />
+    <None Include="Resources\logoTxt_on.png" />
+    <Content Include="TLD.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
