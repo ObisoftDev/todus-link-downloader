@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TDM.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DownloadPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">downloads</Value>
+    </Setting>
+    <Setting Name="authorization" Type="System.String" Scope="User">
+      <Value Profile="(Default)">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTc2MzMzOTYsInVzZXJuYW1lIjoiNTM1NDg1ODE4MSIsInZlcnNpb24iOiIyMTgwMCJ9.9hztygU8V0mQ5WgZ0DzsmPC9Qtqx4BiYrJsmMv6ndhI</Value>
+    </Setting>
+    <Setting Name="MaxDownloads" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="NumberPhone" Type="System.String" Scope="User">
+      <Value Profile="(Default)">54858181</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
